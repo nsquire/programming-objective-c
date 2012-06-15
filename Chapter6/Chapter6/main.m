@@ -274,49 +274,74 @@ int main(int argc, const char * argv[])
         
         // #6
         
-        int number, temp, divisor = 1, counter = 1;
+        int number, origNumber, temp, divisor = 1, counter = 0;
+        
         NSLog (@"Enter your number."); 
         scanf ("%i", &number);
         
         temp = number;
+        origNumber = number;
         
-        while (number != 1)
+        //NSLog(@"number: %i counter: %i", number, counter);
+        while (number != 0)
         {
-            
             number /= 10;
             counter += 1;
-            divisor *= 10;
             
-            NSLog(@"%i %i", number, counter);
+            if (number != 0) {
+                divisor *= 10;
+            }
+            //NSLog(@"number: %i counter: %i divisor: %i", number, counter, divisor);
         }
-        
-        NSLog(@"done");
+        //NSLog(@"done setting counter and divisor...");
          
-        for (int i = counter; i > 0; --i, divisor /= 10, temp /= 10)
+        for (int i = 0; i < counter; ++i)
         {
-            NSLog(@"%i %i %i, %i", temp, i, counter, divisor);
-            NSLog(@"%i", temp / divisor );
+            //NSLog(@"temp: %i i: %i counter: %i, divisor: %i", temp, i, counter, divisor);
+            //NSLog(@"%i", temp / divisor );
+            
+            int digit = temp / divisor;
+            
+            temp = origNumber % divisor;
+            divisor /= 10;
+            
+            switch ( digit ) 
+            { 
+                case 0:
+                    NSLog(@"zero");
+                    break;
+                case 1:
+                    NSLog(@"one");
+                    break; 
+                case 2:
+                    NSLog(@"two");
+                    break; 
+                case 3:
+                    NSLog(@"three");
+                    break; 
+                case 4:
+                    NSLog(@"four");
+                    break;
+                case 5:
+                    NSLog(@"five");
+                    break;
+                case 6:
+                    NSLog(@"six");
+                    break;
+                case 7:
+                    NSLog(@"seven");
+                    break;
+                case 8:
+                    NSLog(@"eight");
+                    break;
+                case 9:
+                    NSLog(@"nine");
+                    break;
+                default:
+                    NSLog (@"Unknown digit."); 
+                    break;
+            }
         }
-        
-        /*
-       
-        right_digit = number % 10; // 3 <-
-        number % 10; // 2
-        number % 10; // 1
-        
-        number /= 10; //12
-        left_digit = number /= 10; // 1 <-
-        number /= 10; // 0
-        
-        
-        while ( number != 0 )
-            num
-        
-        if ( number == 0 ) // we know we're at the end of the number
-            left_digit = right_digit;
-        */
-         
-        
     }
     return 0;
 }
