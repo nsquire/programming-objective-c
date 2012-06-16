@@ -269,8 +269,6 @@ int main(int argc, const char * argv[])
         
         if ( printNegative )
             NSLog (@"-"); 
-         
-         */
         
         // #6
         
@@ -342,6 +340,27 @@ int main(int argc, const char * argv[])
                     break;
             }
         }
+         
+         */
+        
+        // # 7
+        
+        int p, d, isPrime;
+        
+        NSLog (@"2");
+        for ( p = 3; p < 50; p+=2 ) 
+        {
+            isPrime = 1;
+            
+            for ( d = 3; isPrime != 0, d < p; d+=2 )
+                if ( p % d == 0 )
+                    isPrime = 0;
+            
+            if ( isPrime != 0 ) 
+                NSLog (@"%i ", p);
+            
+        }
+        
     }
     return 0;
 }
