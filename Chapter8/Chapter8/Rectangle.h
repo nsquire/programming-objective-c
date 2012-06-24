@@ -18,5 +18,7 @@
 -(void) setHeight: (float)h andWidth: (float)w;
 -(float) area;
 -(float) perimeter;
+-(BOOL) containsPoint: (XYPoint *) aPoint;
+-(Rectangle *) intersect: (Rectangle *) rect;
 
 @end

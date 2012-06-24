@@ -138,7 +138,7 @@ int main(int argc, const char * argv[])
 
         NSLog(@"Point x=%f, y=%f", myRect.origin.x, myRect.origin.y);
         
-         */
+         
         
         // #5
         
@@ -195,6 +195,41 @@ int main(int argc, const char * argv[])
         NSLog(@"Area=%f, Perimeter=%f", myTriangle.area, myTriangle.perimeter);
 
         
+        
+        // #6
+        
+        Rectangle *myRect = [[Rectangle alloc] init];
+        [myRect setHeight: 10 andWidth: 10];
+        
+        XYPoint *myPoint = [[XYPoint alloc] init];
+        [myPoint setX: 0 andY: 0];
+        
+        myRect.origin = myPoint;
+        
+        XYPoint *myNextPoint = [[XYPoint alloc] init];
+        [myNextPoint setX: 5 andY: 5];
+        
+        NSLog(@"contains? %i", [myRect containsPoint: myNextPoint]);
+        
+         */
+        
+        // #7
+        
+        Rectangle *aRect = [[Rectangle alloc] init];
+        [aRect setHeight: 75 andWidth: 250];
+        XYPoint *aPt = [[XYPoint alloc] init];
+        [aPt setX: 200 andY: 420];
+        aRect.origin = aPt;
+        
+        Rectangle *bRect = [[Rectangle alloc] init];
+        [bRect setHeight: 180 andWidth: 100];
+        XYPoint *bPt = [[XYPoint alloc] init];
+        [bPt setX: 400 andY: 300];
+        bRect.origin = bPt;
+        
+        Rectangle *intRect = [aRect intersect: bRect];
+        
+        NSLog(@"New Rectangle X: %f, Y: %f, Height: %f and Width: %f", intRect.origin.x, intRect.origin.y, intRect.height, intRect.width);
         
         
     }
