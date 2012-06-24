@@ -195,6 +195,8 @@ int main(int argc, const char * argv[])
         NSLog(@"Area=%f, Perimeter=%f", myTriangle.area, myTriangle.perimeter);
 
         
+        
+        
     }
     return 0;
 }
