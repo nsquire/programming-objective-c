@@ -38,8 +38,8 @@
     
     BOOL contained = false;
     
-    if (aPoint.x >= self.origin.x && aPoint.x <= (self.origin.x + width)) {
-        if (aPoint.y >= self.origin.y && aPoint.y <= (self.origin.y + height)) {
+    if (aPoint.x > self.origin.x && aPoint.x < (self.origin.x + width)) {
+        if (aPoint.y > self.origin.y && aPoint.y < (self.origin.y + height)) {
             contained = true;
         }
     }
@@ -55,7 +55,14 @@
     
     XYPoint *topLeft =  [[XYPoint alloc] init];
     [topLeft setX: r.origin.x andY: (r.origin.y + r.height)];
-    BOOL contains = [self containsPoint: topLeft];
+    
+    XYPoint *topRight =  [[XYPoint alloc] init];
+    [topRight setX: (r.origin.x + r.width) andY: (r.origin.y + r.height)];
+    
+    XYPoint *bottomRight =  [[XYPoint alloc] init];
+    [bottomRight setX: (r.origin.x + r.width) andY: r.origin.y];
+    
+    BOOL contains = [self containsPoint: topLeft] || [self containsPoint: topRight] || [self containsPoint: bottomRight] || [self containsPoint: r.origin];
     
     if (contains == false) {
         [intersectRectangle setHeight: 0 andWidth: 0];
@@ -73,6 +80,30 @@
     [intersectRectangle setHeight: intersectHeight andWidth: intersectWidth];
     
     return intersectRectangle;
+}
+
+-(void) draw
+{
+    for (int i = 0; i < self.width; ++i) {
+        printf("-");
+    }
+    
+    printf("\n");
+    
+    for (int h = 0; h < self.height; ++h) {
+        printf("|");
+        
+        for (int w = 0; w < (self.width - 2); ++w) {
+            printf(" ");
+        }
+        
+        printf("|");
+        printf("\n");
+    }
+    
+    for (int i = 0; i < self.width; ++i) {
+        printf("-");
+    }
 }
 
 @end

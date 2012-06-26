@@ -211,7 +211,7 @@ int main(int argc, const char * argv[])
         
         NSLog(@"contains? %i", [myRect containsPoint: myNextPoint]);
         
-         */
+        
         
         // #7
         
@@ -231,6 +231,13 @@ int main(int argc, const char * argv[])
         
         NSLog(@"New Rectangle X: %f, Y: %f, Height: %f and Width: %f", intRect.origin.x, intRect.origin.y, intRect.height, intRect.width);
         
+          */
+        
+        // #8
+        
+        Rectangle *myRect = [[Rectangle alloc] init];
+        [myRect setHeight: 3 andWidth: 10];
+        [myRect draw];
         
     }
     return 0;

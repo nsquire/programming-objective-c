@@ -20,5 +20,6 @@
 -(float) perimeter;
 -(BOOL) containsPoint: (XYPoint *) aPoint;
 -(Rectangle *) intersect: (Rectangle *) rect;
+-(void) draw;
 
 @end
