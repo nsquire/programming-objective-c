@@ -10,9 +10,10 @@
 
 @interface AddressCard : NSObject
 
-@property (copy, nonatomic) NSString *name, *email;
+@property (copy, nonatomic) NSString *name, *email, *physicalAddress;
 
 -(void) setName:(NSString *) theName andEmail: (NSString *) theEmail;
+-(void) setName:(NSString *) theName andEmail: (NSString *) theEmail andAddress: (NSString *) theAddress;
 -(void) print;
 -(NSComparisonResult) compareNames: (id) element;
 

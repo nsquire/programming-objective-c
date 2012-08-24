@@ -8,6 +8,14 @@
 
 #import "Fraction+Comparison.h"
 
-@implementation Fraction_Comparison
+@implementation Fraction (comparison)
+
+-(NSComparisonResult) compareFractions: (id) element
+{
+    NSNumber *aNum = [[NSNumber alloc] initWithDouble: self.convertToNum];
+    NSNumber *bNum = [[NSNumber alloc] initWithDouble: [element convertToNum]];
+                      
+    return [aNum compare: bNum];
+}
 
 @end

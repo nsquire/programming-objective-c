@@ -10,4 +10,8 @@
 
 @interface Song : NSObject
 
+@property (copy, nonatomic) NSString *title, *artist, *album, *playingTime;
+
+-(void) setTitle:(NSString *)theTitle andArtist:(NSString *)theArtist andAlbum:(NSString *)theAlbum andPlayingTime:(NSString *)thePlayingTime;
+
 @end

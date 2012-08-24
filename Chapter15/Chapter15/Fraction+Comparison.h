@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Fraction.h"
 
-@interface Fraction_Comparison : NSObject
+@interface Fraction (comparison)
+
+-(NSComparisonResult) compareFractions: (id) element;
 
 @end

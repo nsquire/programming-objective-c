@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Fraction.h"
 
-@interface Fraction_MathOps : NSObject
+@interface Fraction (MathOps)
+
+-(Fraction *) add: (Fraction *) f;
+-(Fraction *) mul: (Fraction *) f;
+-(Fraction *) sub: (Fraction *) f;
+-(Fraction *) div: (Fraction *) f;
 
 @end

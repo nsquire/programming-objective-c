@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A669191715E17EE600D7A997 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = A669191615E17EE600D7A997 /* Fraction.m */; };
+		A669191B15E17F1F00D7A997 /* Fraction+MathOps.m in Sources */ = {isa = PBXBuildFile; fileRef = A669191A15E17F1F00D7A997 /* Fraction+MathOps.m */; };
+		A669191E15E1B85000D7A997 /* Fraction+Comparison.m in Sources */ = {isa = PBXBuildFile; fileRef = A669191D15E1B85000D7A997 /* Fraction+Comparison.m */; };
+		A669192115E1CD0800D7A997 /* Song.m in Sources */ = {isa = PBXBuildFile; fileRef = A669192015E1CD0800D7A997 /* Song.m */; };
+		A669192415E1CD1700D7A997 /* Playlist.m in Sources */ = {isa = PBXBuildFile; fileRef = A669192315E1CD1700D7A997 /* Playlist.m */; };
+		A669192715E1CD2300D7A997 /* MusicCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = A669192615E1CD2300D7A997 /* MusicCollection.m */; };
 		A6BAF40415CF6B3D007845B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BAF40315CF6B3D007845B5 /* Foundation.framework */; };
 		A6BAF40715CF6B3D007845B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6BAF40615CF6B3D007845B5 /* main.m */; };
 		A6BAF40B15CF6B3D007845B5 /* Chapter15.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A6BAF40A15CF6B3D007845B5 /* Chapter15.1 */; };
@@ -29,6 +35,18 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A669191515E17EE600D7A997 /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		A669191615E17EE600D7A997 /* Fraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
+		A669191915E17F1F00D7A997 /* Fraction+MathOps.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fraction+MathOps.h"; sourceTree = "<group>"; };
+		A669191A15E17F1F00D7A997 /* Fraction+MathOps.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fraction+MathOps.m"; sourceTree = "<group>"; };
+		A669191C15E1B85000D7A997 /* Fraction+Comparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fraction+Comparison.h"; sourceTree = "<group>"; };
+		A669191D15E1B85000D7A997 /* Fraction+Comparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fraction+Comparison.m"; sourceTree = "<group>"; };
+		A669191F15E1CD0800D7A997 /* Song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Song.h; path = ../Song.h; sourceTree = "<group>"; };
+		A669192015E1CD0800D7A997 /* Song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Song.m; path = ../Song.m; sourceTree = "<group>"; };
+		A669192215E1CD1700D7A997 /* Playlist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Playlist.h; path = ../Playlist.h; sourceTree = "<group>"; };
+		A669192315E1CD1700D7A997 /* Playlist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Playlist.m; path = ../Playlist.m; sourceTree = "<group>"; };
+		A669192515E1CD2300D7A997 /* MusicCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MusicCollection.h; path = ../MusicCollection.h; sourceTree = "<group>"; };
+		A669192615E1CD2300D7A997 /* MusicCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MusicCollection.m; path = ../MusicCollection.m; sourceTree = "<group>"; };
 		A6BAF3FF15CF6B3D007845B5 /* Chapter15 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Chapter15; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6BAF40315CF6B3D007845B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A6BAF40615CF6B3D007845B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -82,14 +100,26 @@
 		A6BAF40515CF6B3D007845B5 /* Chapter15 */ = {
 			isa = PBXGroup;
 			children = (
+				A6BAF40A15CF6B3D007845B5 /* Chapter15.1 */,
 				A6BAF40615CF6B3D007845B5 /* main.m */,
 				A6BAF41715DCBFFF007845B5 /* AddressBook.h */,
 				A6BAF41815DCBFFF007845B5 /* AddressBook.m */,
 				A6BAF41415D8D855007845B5 /* AddressCard.h */,
 				A6BAF41515D8D855007845B5 /* AddressCard.m */,
+				A669191C15E1B85000D7A997 /* Fraction+Comparison.h */,
+				A669191D15E1B85000D7A997 /* Fraction+Comparison.m */,
+				A669191915E17F1F00D7A997 /* Fraction+MathOps.h */,
+				A669191A15E17F1F00D7A997 /* Fraction+MathOps.m */,
+				A669191515E17EE600D7A997 /* Fraction.h */,
+				A669191615E17EE600D7A997 /* Fraction.m */,
+				A669192515E1CD2300D7A997 /* MusicCollection.h */,
+				A669192615E1CD2300D7A997 /* MusicCollection.m */,
 				A6BAF41115CF6BA9007845B5 /* NSDate+ElapsedDays.h */,
 				A6BAF41215CF6BA9007845B5 /* NSDate+ElapsedDays.m */,
-				A6BAF40A15CF6B3D007845B5 /* Chapter15.1 */,
+				A669192215E1CD1700D7A997 /* Playlist.h */,
+				A669192315E1CD1700D7A997 /* Playlist.m */,
+				A669191F15E1CD0800D7A997 /* Song.h */,
+				A669192015E1CD0800D7A997 /* Song.m */,
 				A6BAF40815CF6B3D007845B5 /* Supporting Files */,
 			);
 			path = Chapter15;
@@ -158,6 +188,12 @@
 				A6BAF41315CF6BA9007845B5 /* NSDate+ElapsedDays.m in Sources */,
 				A6BAF41615D8D855007845B5 /* AddressCard.m in Sources */,
 				A6BAF41915DCBFFF007845B5 /* AddressBook.m in Sources */,
+				A669191715E17EE600D7A997 /* Fraction.m in Sources */,
+				A669191B15E17F1F00D7A997 /* Fraction+MathOps.m in Sources */,
+				A669191E15E1B85000D7A997 /* Fraction+Comparison.m in Sources */,
+				A669192115E1CD0800D7A997 /* Song.m in Sources */,
+				A669192415E1CD1700D7A997 /* Playlist.m in Sources */,
+				A669192715E1CD2300D7A997 /* MusicCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +286,7 @@
 				A6BAF41015CF6B3D007845B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Song.h"
 
 @interface Playlist : NSObject
+
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, strong) NSMutableArray *songs;
+
+-(void) addSong:(Song *)theSong;
+-(void) removeSong:(Song *)theSong;
+
+-(NSString *) description;
 
 @end

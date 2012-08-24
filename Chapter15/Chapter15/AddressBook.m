@@ -41,6 +41,18 @@
     [book removeObjectIdenticalTo: theCard];
 }
 
+-(BOOL) removeName: (NSString *) theName
+{
+    AddressCard *theCard = [self lookupPartialWithIndexOf:theName];
+    
+    if (theCard != nil) {
+        [self removeCard:theCard];
+        return YES;
+    }
+    else
+        return NO;
+}
+
 -(NSUInteger) entries
 {
     return [book count];
@@ -48,14 +60,17 @@
 
 -(void) list
 {
+    NSLog (@"\n");
     NSLog (@"======== Contents of: %@ =========", bookName);
     
     for ( AddressCard *theCard in book )
     {
         NSLog (@"%-20s    %-32s", [theCard.name UTF8String], [theCard.email UTF8String]);
+        NSLog (@"%-20s", [theCard.physicalAddress UTF8String]);
     }
     
     NSLog (@"==================================================");
+    NSLog (@"\n");
 }
 
 -(void) sort
@@ -92,17 +107,118 @@
     {
         NSRange theRange = [nextCard.name rangeOfString: theName];
         
-        if (theRange.location != 0) {
+        if (theRange.length >= 1) {
             return nextCard;
         }
-        
-        //if ([nextCard.name rangeOfString: theName] )
-        //{
-        //    return nextCard;
-        //}
     }
     
     return nil;
+}
+
+-(AddressCard *) lookupWithIndexSet: (NSString *) theName
+{
+    NSUInteger result = [book indexOfObjectPassingTest:
+    ^ (id obj, NSUInteger idx, BOOL *stop)
+    {
+        if ([[obj name] caseInsensitiveCompare: theName] == NSOrderedSame)
+        {
+            return YES;
+        }
+        else
+            return NO; // keep looking
+    } ];
+    
+    // See if we found a match
+    if (result != NSNotFound) // there should only be one element
+        return [book objectAtIndex: result];
+    else
+        return nil;
+}
+
+-(NSIndexSet *) lookupAll: (NSString *) theName
+{
+    NSIndexSet *result = [book indexesOfObjectsPassingTest:
+        ^(id obj, NSUInteger idx, BOOL *stop)
+        {
+            if ([[obj name] caseInsensitiveCompare: theName] == NSOrderedSame)
+                return YES; // found a match, keep going
+            else
+                return NO; // keep looking
+        } ];
+    
+    // Return the result
+    return result;
+}
+
+// lookup address card by name - assumes a partial match
+-(AddressCard *) lookupPartialWithIndexOf: (NSString *) theName
+{
+    NSUInteger result = [book indexOfObjectPassingTest:
+        ^ (id obj, NSUInteger idx, BOOL *stop)
+        {
+            NSRange theRange = [[obj name] rangeOfString: theName options: NSCaseInsensitiveSearch];
+            
+            if (theRange.length >= 1) {
+                return YES;
+            }
+            else
+                return NO; // keep looking
+        } ];
+    
+    // See if we found a match
+    if (result != NSNotFound) // there should only be one element
+        return [book objectAtIndex: result];
+    else
+        return nil;
+}
+
+-(NSArray *) lookupPartialReturningArray: (NSString *) theName
+{
+    // (Hint: After the indexesOfObjectsPassingTest: method is done, enumerate each index for the index set and add the corresponding element to an array that you’ll return. Better yet, look at the NSArray method objectsAtIndexes:.)
+    
+    NSIndexSet *results = [book indexesOfObjectsPassingTest:
+        ^ (id obj, NSUInteger idx, BOOL *stop)
+        {
+            NSRange theNameRange = [[obj name] rangeOfString: theName options: NSCaseInsensitiveSearch];
+            
+            if (theNameRange.length >= 1) {
+                return YES;
+            }
+            
+            NSRange theEmailRange = [[obj email] rangeOfString: theName options: NSCaseInsensitiveSearch];
+
+            if (theEmailRange.length >= 1) {
+                return YES;
+            }
+            
+            NSRange theAddressRange = [[obj physicalAddress] rangeOfString: theName options: NSCaseInsensitiveSearch];
+            
+            if (theAddressRange.length >= 1) {
+                return YES;
+            }
+            
+            return NO; // keep looking
+        } ];
+    
+    NSLog(@"Number of items in results set: %li", [results count]);
+    
+    //NSUInteger index = [results firstIndex];
+    
+    NSArray *foundAddressCards = [NSArray array];
+    /* while(index != NSNotFound)
+    {
+        //NSLog(@" %@",[book objectAtIndex: index]);
+        [foundAddressCards addObject: [book objectAtIndex: index]];
+        index = [results indexGreaterThanIndex: index];
+    } */
+    
+    //Better yet, look at the NSArray method objectsAtIndexes:
+    foundAddressCards = [book objectsAtIndexes: results];
+    
+    if (foundAddressCards == nil)
+        return nil;
+    
+    return foundAddressCards;
 }
 
 @end

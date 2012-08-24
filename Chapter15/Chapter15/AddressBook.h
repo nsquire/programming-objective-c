@@ -18,10 +18,15 @@
 
 -(void) addCard: (AddressCard *) theCard;
 -(void) removeCard: (AddressCard *) theCard;
+-(BOOL) removeName: (NSString *) theName;
 
 -(void) sort;
 -(AddressCard *) lookup: (NSString *) theName;
 -(AddressCard *) lookupWithPartial: (NSString *) theName;
+-(AddressCard *) lookupWithIndexSet: (NSString *) theName;
+-(NSIndexSet *) lookupAll: (NSString *) theName;
+-(AddressCard *) lookupPartialWithIndexOf: (NSString *) theName;
+-(NSArray *) lookupPartialReturningArray: (NSString *) theName;
 -(NSUInteger) entries;
 -(void) list;
 
