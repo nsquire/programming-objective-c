@@ -14,8 +14,10 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSMutableArray *songs;
 
+-(id) init;
 -(void) addSong:(Song *)theSong;
 -(void) removeSong:(Song *)theSong;
+-(void) listSongs;
 
 -(NSString *) description;
 

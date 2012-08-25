@@ -8,10 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "Playlist.h"
+#import "Song.h"
 
 @interface MusicCollection : NSObject
 
 @property (nonatomic, strong) NSMutableArray *playlists;
+
++(void)initialize;
++(NSMutableArray *)library;
+
++(void) addToMaster:(Song *)theSong;
++(void) removeFromMaster:(Song *)theSong;
++(void) listMaster;
 
 -(id) init;
 -(void) list;

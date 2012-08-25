@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NSDate+ElapsedDays.h"
 #import "AddressCard.h"
 #import "AddressBook.h"
 #import "Fraction.h"
 #import "Fraction+MathOps.h"
 #import "Fraction+Comparison.h"
+#import "MusicCollection.h"
+#import "NSDate+ElapsedDays.h"
+#import "Playlist.h"
+#import "Song.h"
 
 int main(int argc, const char * argv[])
 {
@@ -171,6 +174,31 @@ int main(int argc, const char * argv[])
         {
             NSLog(@"%@", myFraction);
         }
+        
+        // #9
+        Song *mySong1 = [[Song alloc] init];
+        [mySong1 setTitle:@"my title 1" andArtist:@"my artist 1" andAlbum:@"my album 1" andPlayingTime:@"my playing time 1"];
+        [mySong1 print];
+        
+        Song *mySong2 = [[Song alloc] init];
+        [mySong2 setTitle:@"my title 2" andArtist:@"my artist 2" andAlbum:@"my album 2" andPlayingTime:@"my playing time 2"];
+        [mySong2 print];
+        
+        [MusicCollection listMaster];
+        
+        Playlist *myPlaylist1 = [[Playlist alloc] init];
+        [myPlaylist1 setName:@"my playlist 1"];
+        [myPlaylist1 addSong:mySong1];
+        [myPlaylist1 addSong:mySong2];
+        [myPlaylist1 listSongs];
+        
+        Song *mySong3 = [[Song alloc] init];
+        [mySong3 setTitle:@"my title 3" andArtist:@"my artist 3" andAlbum:@"my album 3" andPlayingTime:@"my playing time 3"];
+        [mySong3 print];
+        
+        [MusicCollection listMaster];
+
+        
         
     }
     return 0;

@@ -12,6 +12,8 @@
 
 @property (copy, nonatomic) NSString *title, *artist, *album, *playingTime;
 
+-(id) init;
 -(void) setTitle:(NSString *)theTitle andArtist:(NSString *)theArtist andAlbum:(NSString *)theAlbum andPlayingTime:(NSString *)thePlayingTime;
+-(void) print;
 
 @end

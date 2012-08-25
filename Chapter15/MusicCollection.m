@@ -7,14 +7,47 @@
 //
 
 #import "MusicCollection.h"
-#import "Playlist.h"
 
 @implementation MusicCollection
-{
-    NSMutableArray *library;
-}
+
+static NSMutableArray *library;
 
 @synthesize playlists;
+
++(void)initialize
+{
+    NSLog(@"Initialize has been called");
+    [super initialize];
+    
+    library = [NSMutableArray array];
+}
+
++(NSMutableArray *)library
+{
+    return library;
+}
+
++(void) addToMaster:(Song *)theSong
+{
+    extern NSMutableArray *library;
+    [library addObject:theSong];
+}
+
++(void) removeFromMaster:(Song *)theSong
+{
+    extern NSMutableArray *library;
+    //[library removeObject:theSong];
+}
+
+
++(void) listMaster
+{
+    extern NSMutableArray *library;
+    
+    NSLog(@"Printing all songs in library:");
+    for (Song *theSong in library)
+        [theSong print];
+}
 
 -(id) init
 {
@@ -22,7 +55,7 @@
     
     if (self)
     {
-        library = [NSArray array];
+        //library = [NSMutableArray array];
     }
     
     return self;
