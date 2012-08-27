@@ -13,6 +13,7 @@
 #import "Fraction.h"
 #import "Fraction+MathOps.h"
 #import "Fraction+Comparison.h"
+#import "FrequencyCounter.h"
 #import "MusicCollection.h"
 #import "NSDate+ElapsedDays.h"
 #import "Playlist.h"
@@ -211,6 +212,11 @@ int main(int argc, const char * argv[])
             [theSong print];
         }
         
+        // #10
+        NSArray *numbersArray = [NSArray arrayWithObjects: [NSNumber numberWithInteger: 100], [NSNumber numberWithInteger: 100], [NSNumber numberWithInteger: 101], [NSNumber numberWithInteger: 202], [NSNumber numberWithInteger: 202], [NSNumber numberWithInteger: 303], nil];
+        FrequencyCounter *myFrequencyCounter = [[FrequencyCounter alloc] init];
+        [myFrequencyCounter printFrequencies:numbersArray];
+    
     }
     return 0;
 }
