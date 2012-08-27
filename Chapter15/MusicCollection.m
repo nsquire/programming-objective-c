@@ -11,8 +11,7 @@
 @implementation MusicCollection
 
 static NSMutableArray *library;
-
-@synthesize playlists;
+static NSMutableArray *playlists;
 
 +(void)initialize
 {
@@ -20,6 +19,7 @@ static NSMutableArray *library;
     [super initialize];
     
     library = [NSMutableArray array];
+    playlists = [NSMutableArray array];
 }
 
 +(NSMutableArray *)library
@@ -27,20 +27,37 @@ static NSMutableArray *library;
     return library;
 }
 
-+(void) addToMaster:(Song *)theSong
++(NSMutableArray *)playlists
+{
+    return playlists;
+}
+
++(void) addSongToLibrary:(Song *)theSong
 {
     extern NSMutableArray *library;
     [library addObject:theSong];
 }
 
-+(void) removeFromMaster:(Song *)theSong
++(void) removeSongFromLibrary:(Song *)theSong
 {
+    NSLog(@"In removeSongFromLibrary:");
+    
     extern NSMutableArray *library;
-    //[library removeObject:theSong];
+    extern NSMutableArray *playlists;
+    
+    for (Playlist *thePlaylist in playlists)
+    {
+        NSLog(@"Looping through playlists...");
+        if ([thePlaylist.songs containsObject:theSong]) {
+            NSLog(@"Found song in library");
+            [thePlaylist removeSong:theSong];
+        }
+    }
+    
+    [library removeObjectIdenticalTo:theSong];
 }
 
-
-+(void) listMaster
++(void) listLibrary
 {
     extern NSMutableArray *library;
     
@@ -49,33 +66,59 @@ static NSMutableArray *library;
         [theSong print];
 }
 
--(id) init
-{
-    self = [super init];
-    
-    if (self)
-    {
-        //library = [NSMutableArray array];
-    }
-    
-    return self;
-}
-
--(void) add:(Playlist *)thePlaylist
++(void) addPlaylist:(Playlist *)thePlaylist
 {
     [playlists addObject:thePlaylist];
 }
 
--(void) remove: (Playlist *)thePlaylist
++(void) removePlaylist: (Playlist *)thePlaylist
 {
-    [playlists removeObject:thePlaylist];
+    [playlists removeObjectIdenticalTo:thePlaylist];
 }
 
--(void) list
++(void) listPlaylists
 {
+    NSLog(@"Printing all playlists in the Music Collection:");
     for (Playlist *playlist in playlists) {
         NSLog(@"%@", playlist);
     }
+}
+
++(NSArray *) lookup: (NSString *) searchString
+{
+    NSIndexSet *results = [library indexesOfObjectsPassingTest:
+       ^ (id obj, NSUInteger idx, BOOL *stop)
+       {
+           NSRange theTitleRange = [[obj title] rangeOfString: searchString options: NSCaseInsensitiveSearch];
+           
+           if (theTitleRange.length >= 1) {
+               return YES;
+           }
+           
+           NSRange theArtistRange = [[obj artist] rangeOfString: searchString options: NSCaseInsensitiveSearch];
+           
+           if (theArtistRange.length >= 1) {
+               return YES;
+           }
+           
+           NSRange theAlbumRange = [[obj album] rangeOfString: searchString options: NSCaseInsensitiveSearch];
+           
+           if (theAlbumRange.length >= 1) {
+               return YES;
+           }
+           
+           return NO; // keep looking
+       } ];
+    
+    NSLog(@"Number of items in results set: %li", [results count]);
+        
+    NSArray *foundSongs = [NSArray array];
+    foundSongs = [library objectsAtIndexes: results];
+    
+    if (foundSongs == nil)
+        return nil;
+    else
+        return foundSongs;
 }
 
 @end

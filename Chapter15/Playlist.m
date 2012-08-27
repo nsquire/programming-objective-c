@@ -36,8 +36,8 @@
 
 -(void) removeSong:(Song *)theSong
 {
-    NSLog(@"Removing song to playlist...");
-    [songs removeObject: theSong];
+    NSLog(@"Removing song in playlist...");
+    [songs removeObjectIdenticalTo: theSong];
 }
 
 -(void) listSongs

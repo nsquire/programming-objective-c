@@ -12,19 +12,17 @@
 
 @interface MusicCollection : NSObject
 
-@property (nonatomic, strong) NSMutableArray *playlists;
-
 +(void)initialize;
 +(NSMutableArray *)library;
++(NSMutableArray *)playlists;
 
-+(void) addToMaster:(Song *)theSong;
-+(void) removeFromMaster:(Song *)theSong;
-+(void) listMaster;
++(void) addSongToLibrary:(Song *)theSong;
++(void) removeSongFromLibrary:(Song *)theSong;
++(void) listLibrary;
 
--(id) init;
--(void) list;
-
--(void) add:(Playlist *)thePlaylist;
--(void) remove: (Playlist *)thePlaylist;
++(void) addPlaylist:(Playlist *)thePlaylist;
++(void) removePlaylist: (Playlist *)thePlaylist;
++(void) listPlaylists;
++(NSArray *) lookup:(NSString *)searchString;
 
 @end

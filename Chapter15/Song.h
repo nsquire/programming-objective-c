@@ -15,5 +15,6 @@
 -(id) init;
 -(void) setTitle:(NSString *)theTitle andArtist:(NSString *)theArtist andAlbum:(NSString *)theAlbum andPlayingTime:(NSString *)thePlayingTime;
 -(void) print;
+//-(BOOL) isEqual: (Song *) theSong;
 
 @end

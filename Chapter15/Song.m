@@ -20,7 +20,7 @@
     
     if (self)
     {
-        [MusicCollection addToMaster: self];
+        [MusicCollection addSongToLibrary: self];
     }
     
     return self;
@@ -38,5 +38,18 @@
 {
     NSLog(@"Title: %s, Artist: %s, Album: %s, Playing time: %s", [self.title UTF8String], [self.artist UTF8String], [self.album UTF8String], [self.playingTime UTF8String]);
 }
+
+/*-(BOOL) isEqual: (Song *) theSong
+{
+    NSLog(@"In Song's isEqual method");
+    
+    if ([self.title isEqualToString: theSong.title] == YES &&
+        [self.artist isEqualToString: theSong.artist] == YES &&
+        [self.album isEqualToString: theSong.album] == YES &&
+        [self.playingTime isEqualToString: theSong.playingTime] == YES)
+        return YES;
+    else
+        return NO;
+}*/
 
 @end

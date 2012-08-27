@@ -184,7 +184,7 @@ int main(int argc, const char * argv[])
         [mySong2 setTitle:@"my title 2" andArtist:@"my artist 2" andAlbum:@"my album 2" andPlayingTime:@"my playing time 2"];
         [mySong2 print];
         
-        [MusicCollection listMaster];
+        [MusicCollection listLibrary];
         
         Playlist *myPlaylist1 = [[Playlist alloc] init];
         [myPlaylist1 setName:@"my playlist 1"];
@@ -196,9 +196,20 @@ int main(int argc, const char * argv[])
         [mySong3 setTitle:@"my title 3" andArtist:@"my artist 3" andAlbum:@"my album 3" andPlayingTime:@"my playing time 3"];
         [mySong3 print];
         
-        [MusicCollection listMaster];
-
+        [MusicCollection addPlaylist:myPlaylist1];
+        [MusicCollection listPlaylists];
         
+        [myPlaylist1 listSongs];
+        [MusicCollection listLibrary];
+        [MusicCollection removeSongFromLibrary:mySong1];
+        [MusicCollection listLibrary];
+        [myPlaylist1 listSongs];
+        
+        NSArray *searchResults = [MusicCollection lookup:@"my"];
+        for (Song *theSong in searchResults)
+        {
+            [theSong print];
+        }
         
     }
     return 0;
