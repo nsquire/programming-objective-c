@@ -18,7 +18,6 @@ int main(int argc, const char * argv[])
         NSFileManager   *fm;
         NSString        *dest;
         NSArray         *sources;
-        NSMutableArray  *destinations;
         BOOL            isDir;
         NSProcessInfo   *proc = [NSProcessInfo processInfo];
         NSArray         *args = [proc arguments];
@@ -38,7 +37,6 @@ int main(int argc, const char * argv[])
             argsRange.length = ([args count] - 2);
             
             sources = [args subarrayWithRange: argsRange];
-            destinations = [NSMutableArray arrayWithArray: sources];
             dest = [args lastObject];
             
             NSLog(@"Sources: %@", sources);

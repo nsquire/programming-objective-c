@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Chapter16-MyFind' target in the 'Chapter16-MyFind' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
