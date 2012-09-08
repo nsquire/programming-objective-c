@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Chapter16-Baseline' target in the 'Chapter16-Baseline' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
