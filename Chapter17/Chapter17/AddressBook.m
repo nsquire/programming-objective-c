@@ -70,9 +70,9 @@
     
     [newAddressBook setBookName: bookName];
     
-    // The following will do a shallow copy of the address book
+    // The following will do a deep copy of the address book
 
-    [newAddressBook setBook: book];
+    [newAddressBook setBook: [book mutableCopy]];
     
     return newAddressBook;
 }
