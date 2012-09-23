@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A62D7575160EADCD001594D7 /* calculator-copy.png in Resources */ = {isa = PBXBuildFile; fileRef = A62D7574160EADCD001594D7 /* calculator-copy.png */; };
+		A62D7577160EAE24001594D7 /* calculator-copy-nr.png in Resources */ = {isa = PBXBuildFile; fileRef = A62D7576160EAE24001594D7 /* calculator-copy-nr.png */; };
+		A6D355B6160C362500FC8A57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D355B5160C362500FC8A57 /* UIKit.framework */; };
+		A6D355B8160C362500FC8A57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D355B7160C362500FC8A57 /* Foundation.framework */; };
+		A6D355BA160C362500FC8A57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6D355B9160C362500FC8A57 /* CoreGraphics.framework */; };
+		A6D355C0160C362500FC8A57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A6D355BE160C362500FC8A57 /* InfoPlist.strings */; };
+		A6D355C2160C362500FC8A57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D355C1160C362500FC8A57 /* main.m */; };
+		A6D355C6160C362500FC8A57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D355C5160C362500FC8A57 /* AppDelegate.m */; };
+		A6D355C9160C362500FC8A57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D355C8160C362500FC8A57 /* ViewController.m */; };
+		A6D355CC160C362500FC8A57 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D355CA160C362500FC8A57 /* ViewController_iPhone.xib */; };
+		A6D355CF160C362500FC8A57 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6D355CD160C362500FC8A57 /* ViewController_iPad.xib */; };
+		A6D355D7160D90DB00FC8A57 /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D355D6160D90DB00FC8A57 /* Fraction.m */; };
+		A6D355DA160D9ACA00FC8A57 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D355D9160D9ACA00FC8A57 /* Calculator.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A62D7574160EADCD001594D7 /* calculator-copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculator-copy.png"; sourceTree = "<group>"; };
+		A62D7576160EAE24001594D7 /* calculator-copy-nr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calculator-copy-nr.png"; sourceTree = "<group>"; };
+		A6D355B1160C362500FC8A57 /* Fraction_Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fraction_Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6D355B5160C362500FC8A57 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A6D355B7160C362500FC8A57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A6D355B9160C362500FC8A57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A6D355BD160C362500FC8A57 /* Fraction_Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Fraction_Calculator-Info.plist"; sourceTree = "<group>"; };
+		A6D355BF160C362500FC8A57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A6D355C1160C362500FC8A57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6D355C3160C362500FC8A57 /* Fraction_Calculator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fraction_Calculator-Prefix.pch"; sourceTree = "<group>"; };
+		A6D355C4160C362500FC8A57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A6D355C5160C362500FC8A57 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A6D355C7160C362500FC8A57 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A6D355C8160C362500FC8A57 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A6D355CB160C362500FC8A57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		A6D355CE160C362500FC8A57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		A6D355D5160D90DB00FC8A57 /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		A6D355D6160D90DB00FC8A57 /* Fraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
+		A6D355D8160D9ACA00FC8A57 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		A6D355D9160D9ACA00FC8A57 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6D355AE160C362500FC8A57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6D355B6160C362500FC8A57 /* UIKit.framework in Frameworks */,
+				A6D355B8160C362500FC8A57 /* Foundation.framework in Frameworks */,
+				A6D355BA160C362500FC8A57 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A6D355A6160C362500FC8A57 = {
+			isa = PBXGroup;
+			children = (
+				A62D7576160EAE24001594D7 /* calculator-copy-nr.png */,
+				A62D7574160EADCD001594D7 /* calculator-copy.png */,
+				A6D355BB160C362500FC8A57 /* Fraction_Calculator */,
+				A6D355B4160C362500FC8A57 /* Frameworks */,
+				A6D355B2160C362500FC8A57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A6D355B2160C362500FC8A57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6D355B1160C362500FC8A57 /* Fraction_Calculator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6D355B4160C362500FC8A57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A6D355B5160C362500FC8A57 /* UIKit.framework */,
+				A6D355B7160C362500FC8A57 /* Foundation.framework */,
+				A6D355B9160C362500FC8A57 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6D355BB160C362500FC8A57 /* Fraction_Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				A6D355C4160C362500FC8A57 /* AppDelegate.h */,
+				A6D355C5160C362500FC8A57 /* AppDelegate.m */,
+				A6D355D8160D9ACA00FC8A57 /* Calculator.h */,
+				A6D355D9160D9ACA00FC8A57 /* Calculator.m */,
+				A6D355C7160C362500FC8A57 /* ViewController.h */,
+				A6D355C8160C362500FC8A57 /* ViewController.m */,
+				A6D355D5160D90DB00FC8A57 /* Fraction.h */,
+				A6D355D6160D90DB00FC8A57 /* Fraction.m */,
+				A6D355CA160C362500FC8A57 /* ViewController_iPhone.xib */,
+				A6D355CD160C362500FC8A57 /* ViewController_iPad.xib */,
+				A6D355BC160C362500FC8A57 /* Supporting Files */,
+			);
+			path = Fraction_Calculator;
+			sourceTree = "<group>";
+		};
+		A6D355BC160C362500FC8A57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6D355BD160C362500FC8A57 /* Fraction_Calculator-Info.plist */,
+				A6D355BE160C362500FC8A57 /* InfoPlist.strings */,
+				A6D355C1160C362500FC8A57 /* main.m */,
+				A6D355C3160C362500FC8A57 /* Fraction_Calculator-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6D355B0160C362500FC8A57 /* Fraction_Calculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6D355D2160C362500FC8A57 /* Build configuration list for PBXNativeTarget "Fraction_Calculator" */;
+			buildPhases = (
+				A6D355AD160C362500FC8A57 /* Sources */,
+				A6D355AE160C362500FC8A57 /* Frameworks */,
+				A6D355AF160C362500FC8A57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fraction_Calculator;
+			productName = Fraction_Calculator;
+			productReference = A6D355B1160C362500FC8A57 /* Fraction_Calculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6D355A8160C362500FC8A57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = A6D355AB160C362500FC8A57 /* Build configuration list for PBXProject "Fraction_Calculator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A6D355A6160C362500FC8A57;
+			productRefGroup = A6D355B2160C362500FC8A57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6D355B0160C362500FC8A57 /* Fraction_Calculator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6D355AF160C362500FC8A57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6D355C0160C362500FC8A57 /* InfoPlist.strings in Resources */,
+				A6D355CC160C362500FC8A57 /* ViewController_iPhone.xib in Resources */,
+				A6D355CF160C362500FC8A57 /* ViewController_iPad.xib in Resources */,
+				A62D7575160EADCD001594D7 /* calculator-copy.png in Resources */,
+				A62D7577160EAE24001594D7 /* calculator-copy-nr.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6D355AD160C362500FC8A57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6D355C2160C362500FC8A57 /* main.m in Sources */,
+				A6D355C6160C362500FC8A57 /* AppDelegate.m in Sources */,
+				A6D355C9160C362500FC8A57 /* ViewController.m in Sources */,
+				A6D355D7160D90DB00FC8A57 /* Fraction.m in Sources */,
+				A6D355DA160D9ACA00FC8A57 /* Calculator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A6D355BE160C362500FC8A57 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6D355BF160C362500FC8A57 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A6D355CA160C362500FC8A57 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6D355CB160C362500FC8A57 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		A6D355CD160C362500FC8A57 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6D355CE160C362500FC8A57 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6D355D0160C362500FC8A57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A6D355D1160C362500FC8A57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6D355D3160C362500FC8A57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fraction_Calculator/Fraction_Calculator-Prefix.pch";
+				INFOPLIST_FILE = "Fraction_Calculator/Fraction_Calculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A6D355D4160C362500FC8A57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Fraction_Calculator/Fraction_Calculator-Prefix.pch";
+				INFOPLIST_FILE = "Fraction_Calculator/Fraction_Calculator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6D355AB160C362500FC8A57 /* Build configuration list for PBXProject "Fraction_Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6D355D0160C362500FC8A57 /* Debug */,
+				A6D355D1160C362500FC8A57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6D355D2160C362500FC8A57 /* Build configuration list for PBXNativeTarget "Fraction_Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6D355D3160C362500FC8A57 /* Debug */,
+				A6D355D4160C362500FC8A57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A6D355A8160C362500FC8A57 /* Project object */;
+}
